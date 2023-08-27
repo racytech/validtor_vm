@@ -1,0 +1,2 @@
+export PATH=$PATH:/home/racytech/erigon_codes/erigon/build/bin
+export PATH=$PATH:/home/racytech/erigon_codes/erigon/build/bin:/home/racytech/erigon_codes/erigon/build/bin
