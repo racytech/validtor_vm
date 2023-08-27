@@ -28,7 +28,7 @@ printf "\n\nInstalling Rust...\n"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 echo "export PATH=$PATH:$HOME/.cargo/env" >> $HOME/.bashrc
 
-souce $HOME/.bashrc
+source $HOME/.bashrc
 
 sleep 1
 erigon_branch="devel"
