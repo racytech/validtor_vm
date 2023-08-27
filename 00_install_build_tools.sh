@@ -18,7 +18,7 @@ sleep 1
 printf "\n\nInstalling Go, version=$GO_VERSION\n"
 go_url="https://go.dev/dl/go$GO_VERSION.linux-amd64.tar.gz"
 wget $go_url
-rm -rf /usr/local/go && tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
 rm go$GO_VERSION.linux-amd64.tar.gz
 echo "export PATH=$PATH:/usr/local/go/bin" >> $HOME/.bashrc
 
