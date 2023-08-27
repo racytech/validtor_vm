@@ -6,9 +6,10 @@ set -Eeuo pipefail
 
 workdir=$(pwd)
 
+GO_VERSION="1.20"
 # sudo apt update && sudo apt upgrade -y
 
-dependancies="build-essential ca-certificates git curl gcc g++ make cmake pkg-config llvm-dev libclang-dev clang curl"
+dependancies="build-essential ca-certificates curl gcc g++ make cmake pkg-config llvm-dev libclang-dev clang curl"
 
 sleep 1
 printf "\n\nInstalling dependancies = $dependancies\n"
