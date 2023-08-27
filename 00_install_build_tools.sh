@@ -2,8 +2,6 @@
 
 set -Eeuo pipefail
 
-# source "vars.sh"
-
 workdir=$(pwd)
 
 GO_VERSION="1.20"
@@ -31,23 +29,18 @@ echo "export PATH=$PATH:$HOME/.cargo/env" >> $HOME/.bashrc
 source $HOME/.bashrc
 
 sleep 1
-erigon_branch="devel"
-erigon_github="https://github.com/ledgerwatch/erigon.git"
-printf "\n\nInstalling Erigon... branch=$erigon_branch\n"
+printf "\n\nInstalling eth2-val-tools\n"
+github_url=https://github.com/protolambda/eth2-val-tools.git
 
-git clone $erigon_github
-cd erigon && git checkout $erigon_branch && make erigon
-echo "export PATH=$PATH:$(pwd)/build/bin" >> $HOME/.bashrc
+git clone $github_url
+cd eth2-val-tools
+# Install this assignments tool
+go install .
+# Move out of this dir
+cd ..
+# Install ethereal
+GO111MODULE=on go install github.com/wealdtech/ethereal@latest
 
-cd $workdir
 
-sleep 1
-lighthouse_branch="unstable"
-lighthouse_github="https://github.com/sigp/lighthouse.git"
-printf "\n\nInstalling Lighthouse... branch=$lighthouse_branch\n"
-
-git clone $lighthouse_github
-
-cd lighthouse && git checkout $lighthouse_branch && make
 
 cd $workdir
