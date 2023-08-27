@@ -25,7 +25,7 @@ echo "export PATH=$PATH:/usr/local/go/bin" >> $HOME/.bashrc
 sleep 1
 printf "\n\nInstalling Rust...\n"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-echo "export $HOME/.cargo/env" >> $HOME/.bashrc
+echo "export PATH=$PATH:$HOME/.cargo/env" >> $HOME/.bashrc
 
 . $HOME/.bashrc
 
