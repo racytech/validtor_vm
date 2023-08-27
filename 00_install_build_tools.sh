@@ -34,7 +34,7 @@ erigon_branch="devel"
 erigon_github="https://github.com/ledgerwatch/erigon.git"
 printf "\n\nInstalling Erigon... branch=$erigon_branch\n"
 
-git clone $erigon_github
+# git clone $erigon_github
 cd erigon && make erigon
 echo "export PATH=$PATH:$(pwd)/build/bin" >> $HOME/.bashrc
 
