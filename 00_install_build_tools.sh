@@ -2,7 +2,7 @@
 
 set -Eeuo pipefail
 
-source "vars.sh"
+# source "vars.sh"
 
 workdir=$(pwd)
 
@@ -27,14 +27,14 @@ printf "\n\nInstalling Rust...\n"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo "export PATH=$PATH:$HOME/.cargo/env" >> $HOME/.bashrc
 
-. $HOME/.bashrc
+souce $HOME/.bashrc
 
 sleep 1
 erigon_branch="devel"
 erigon_github="https://github.com/ledgerwatch/erigon.git"
 printf "\n\nInstalling Erigon... branch=$erigon_branch\n"
 
-# git clone $erigon_github
+git clone $erigon_github
 cd erigon && make erigon
 echo "export PATH=$PATH:$(pwd)/build/bin" >> $HOME/.bashrc
 
