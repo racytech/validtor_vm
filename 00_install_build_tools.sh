@@ -24,6 +24,7 @@ echo "export PATH=$PATH:/usr/local/go/bin" >> $HOME/.bashrc
 sleep 1
 printf "\n\nInstalling Rust...\n"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
 echo "export PATH=$PATH:$HOME/.cargo/env" >> $HOME/.bashrc
 
 source $HOME/.bashrc
@@ -32,8 +33,13 @@ sleep 1
 printf "\n\nInstalling eth2-val-tools\n"
 github_url=https://github.com/protolambda/eth2-val-tools.git
 
-git clone $github_url
+# Lighthouse 
+if [ ! -d "./eth2-val-tools" ]; then
+    git clone $github_url
+fi
+
 cd eth2-val-tools
+git pull 
 # Install this assignments tool
 go install .
 # Move out of this dir
