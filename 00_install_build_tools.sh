@@ -7,12 +7,15 @@ workdir=$(pwd)
 GO_VERSION="1.20"
 # sudo apt update && sudo apt upgrade -y
 
-dependancies="build-essential ca-certificates curl gcc g++ make cmake pkg-config llvm-dev libclang-dev clang curl"
+dependencies="build-essential ca-certificates curl gcc g++ make cmake pkg-config llvm-dev libclang-dev clang git"
 
+## 1. Install dependencies 
 sleep 1
-printf "\n\nInstalling dependancies = $dependancies\n"
-sudo apt install $dependancies -y
+printf "\n\nInstalling dependencies = $dependencies\n"
+sudo apt install $dependencies -y
 
+
+## 2. Install Go
 sleep 1
 printf "\n\nInstalling Go, version=$GO_VERSION\n"
 go_url="https://go.dev/dl/go$GO_VERSION.linux-amd64.tar.gz"
@@ -21,6 +24,8 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go$GO_VERSION.linux-amd
 rm go$GO_VERSION.linux-amd64.tar.gz
 echo "export PATH=$PATH:/usr/local/go/bin" >> $HOME/.bashrc
 
+
+## 2. Install Rust
 sleep 1
 printf "\n\nInstalling Rust...\n"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -29,23 +34,6 @@ echo "export PATH=$PATH:$HOME/.cargo/env" >> $HOME/.bashrc
 
 source $HOME/.bashrc
 
-sleep 1
-printf "\n\nInstalling eth2-val-tools\n"
-github_url=https://github.com/protolambda/eth2-val-tools.git
-
-# Lighthouse 
-if [ ! -d "./eth2-val-tools" ]; then
-    git clone $github_url
-fi
-
-cd eth2-val-tools
-git pull 
-# Install this assignments tool
-go install .
-# Move out of this dir
-cd ..
-# Install ethereal
-GO111MODULE=on go install github.com/wealdtech/ethereal@latest
 
 
 

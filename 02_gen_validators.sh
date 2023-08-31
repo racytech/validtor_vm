@@ -17,4 +17,3 @@ echo $n_validators
 
 
 eth2-val-tools keystores --source-mnemonic "$mnemonic" --source-min 0 --source-max $n_validators
-
