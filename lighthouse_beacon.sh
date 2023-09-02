@@ -11,4 +11,4 @@ exec lighthouse \
     --datadir $DATA_DIR/lighthouse_beacon \
     --network holesky \
     --execution-endpoint="http://localhost:8551" \
-    --execution-jwt=$DATA_DIR/erigon/jwt.hex > /dev/null 2>&1
+    --execution-jwt=$DATA_DIR/erigon/jwt.hex > /dev/null 2>&1 &
