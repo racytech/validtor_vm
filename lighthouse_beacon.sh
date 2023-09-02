@@ -2,7 +2,7 @@
 
 # Start Lighthouse Beacon client  
 
-source "./common.sh"
+source "./scripts/common.sh"
 source $HOME/.bashrc
 
 

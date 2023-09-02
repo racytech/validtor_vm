@@ -40,26 +40,4 @@ cd staking-deposit-cli
 cd $workdir
 
 
-print_step_sleep "Importing validator keys to Lighthouse" 1
 
-echo "Enter the path to the file containing the password for validator_keys (default pswd.txt): "
-read pswd_file
-
-echo $pswd_file
-if [ -z "$pswd_file" ]; then
-    echo "defaulting to pswd.txt, make sure pswd.txt has the same password you entered during validators creation"
-    read -p "Press [Enter] when ready..."
-    pswd_file="pswd.txt"
-fi
-
-echo "Enter suggested-fee-recipient: "
-read suggested_fee_recipient
-
-echo $suggested_fee_recipient
-
-
-lighthouse --network holesky account validator import --directory $workdir/validator_keys --password-file $pswd_file --reuse-password
-
-# rm $pswd_file
-
-cd $workdir
