@@ -49,6 +49,7 @@ echo $pswd_file
 if [ -z "$pswd_file" ]; then
     echo "defaulting to pswd.txt, make sure pswd.txt has the same password you entered during validators creation"
     read -p "Press [Enter] when ready..."
+    pswd_file="pswd.txt"
 fi
 
 echo "Enter suggested-fee-recipient: "
