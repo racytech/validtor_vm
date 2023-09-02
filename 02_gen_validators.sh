@@ -22,11 +22,8 @@ echo $n_validators
 
 cd staking-deposit-cli
 
-validator_keys_dir=$workdir/validator_keys
-mkdir -p $validator_keys_dir
+./deposit.sh existing-mnemonic --num_validators=$n_validators --validator_start_index=0 --chain=holesky --mnemonic="$mnemonic" --folder=$workdir
 
-./deposit.sh existing-mnemonic --num_validators=$n_validators --validator_start_index=0 --chain=holesky --mnemonic="$mnemonic" --folder=$validator_keys_dir
-
-cd $workdir/
+cd $workdir
 
 # eth2-val-tools keystores --source-mnemonic "$mnemonic" --source-min 0 --source-max $n_validators
