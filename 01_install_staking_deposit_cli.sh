@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Installs staking-deposit-cli https://github.com/ethereum/staking-deposit-cli
-# staking-deposit-cli required for genereting validator_keys 
+# staking-deposit-cli required for genereting validator_keys
 # validator_keys are then used by lighthouse validator client
 
 set -Eeuo pipefail
@@ -11,7 +11,7 @@ source "./05_common.sh"
 workdir=$(pwd)
 
 ## 2. Install staking-deposit-cli
-print_step_sleep Installing staking-deposit-cli 1
+print_step_sleep "Installing staking-deposit-cli" 1
 
 github_url=https://github.com/ethereum/staking-deposit-cli.git
 
