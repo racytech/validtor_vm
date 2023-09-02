@@ -52,7 +52,7 @@ if [ -z "$pswd_file" ]; then
 fi
 
 echo "Enter suggested-fee-recipient: "
-read $suggested_fee_recipient
+read suggested_fee_recipient
 
 echo $suggested_fee_recipient
 
