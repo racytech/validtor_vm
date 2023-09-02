@@ -35,6 +35,8 @@ echo $n_validators
 
 cd staking-deposit-cli
 
+source venv/bin/activate
+
 ./deposit.sh existing-mnemonic --num_validators=$n_validators --validator_start_index=0 --chain=holesky --mnemonic="$mnemonic" --folder=$workdir
 
 cd $workdir

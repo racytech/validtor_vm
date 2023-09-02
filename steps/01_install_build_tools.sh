@@ -19,7 +19,7 @@ print_done
 
 
 ## 2. Install dependencies
-dependencies="build-essential ca-certificates curl gcc g++ make cmake pkg-config llvm-dev libclang-dev clang python3-pip"
+dependencies="build-essential ca-certificates curl gcc g++ make cmake pkg-config llvm-dev libclang-dev clang python3-pip python3-venv"
 print_step_sleep "Installing dependencies" 1
 
 sudo apt install $dependencies -y
