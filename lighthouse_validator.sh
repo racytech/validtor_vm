@@ -20,7 +20,7 @@ lighthouse --network holesky account validator import --directory validator_keys
 
 # rm $pswd_file
 
-exec lighthouse \
-    vc \
-    --network holesky \
-    --suggested-fee-recipient $suggested_fee_recipient > /dev/null 2>&1
+lighthouse \
+vc \
+--network holesky \
+--suggested-fee-recipient $suggested_fee_recipient > /dev/null 2>&1
