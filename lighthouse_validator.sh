@@ -6,7 +6,7 @@ source "./common.sh"
 source $HOME/.bashrc
 
 
-lighthouse --network holesky account validator import --directory validator_keys
+lighthouse --network holesky account validator import --directory validator_keys --password-file pswd.txt --reuse-password
 
 # exec lighthouse \
 #     vc \
