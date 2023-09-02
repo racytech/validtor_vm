@@ -22,7 +22,7 @@ fi
 cd staking-deposit-cli
 git pull
 
-if [ ! d "./venv" ]; then 
+if [ ! -d "./venv" ]; then
     python3 -m venv venv
 fi
 

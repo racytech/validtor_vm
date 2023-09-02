@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Ubuntu 23.04 will require
+
 # 1. Updates && upgrades VM
 # 2. Installs dependancies, build-tools
 # 3. Installs GO for erigon
