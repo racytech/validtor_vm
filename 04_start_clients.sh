@@ -2,8 +2,11 @@
 
 # Starts clients.
 
-source ./vars.env
+source "./05_common.sh"
+source $HOME/.bashrc
+# Start Erigon
 
-# Start Erigon 
+print_step "Starting Ergion" 1
 
+erigon -h
 

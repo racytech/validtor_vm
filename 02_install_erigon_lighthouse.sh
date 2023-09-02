@@ -1,10 +1,20 @@
 #!/usr/bin/env bash
 
+# Installs erigon and lighthouse. Erigon will be added to the PATH in .bashrc
+
+
 set -Eeuo pipefail
+
+source "./05_common.sh"
 
 workdir=$(pwd)
 
-sleep 1
+# 1. Install Erigon:
+# - clone if erigon does not exists
+# - checkout to the branch
+# - pull
+# - make
+print_step_sleep "Installing Erigon" 1
 erigon_branch="devel"
 erigon_github="https://github.com/ledgerwatch/erigon.git"
 printf "\n\nInstalling Erigon... branch=$erigon_branch\n"
@@ -18,11 +28,24 @@ git checkout $erigon_branch
 git pull origin $erigon_branch
 make erigon
 
+print_done
+
+
+# 2. Add erigon to the PATH
+print_step_sleep "Adding Erigon to the PATH (.bashrc)" 1
+
 $workdir/pyscripts/add_to_path.py --dirs=$(pwd)/build/bin
+
+print_done
 
 cd $workdir
 
-sleep 1
+# 3. Install Lighthouse
+# - clone if lighthouse does not exists
+# - checkout to the branch
+# - pull
+# - make
+print_step_sleep "Installing Lighthouse" 1
 lighthouse_branch="unstable"
 lighthouse_github="https://github.com/sigp/lighthouse.git"
 printf "\n\nInstalling Lighthouse... branch=$lighthouse_branch\n"
@@ -36,5 +59,7 @@ cd lighthouse
 git checkout $lighthouse_branch
 git pull origin $lighthouse_branch
 make
+
+print_done
 
 cd $workdir
