@@ -20,7 +20,4 @@ lighthouse --network holesky account validator import --directory validator_keys
 
 # rm $pswd_file
 
-lighthouse \
-vc \
---network holesky \
---suggested-fee-recipient $suggested_fee_recipient > /dev/null 2>&1
+exec lighthouse vc --network holesky --suggested-fee-recipient "0x4242424242424242424242424242424242424242" > /dev/null 2>&1
