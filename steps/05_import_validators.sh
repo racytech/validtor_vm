@@ -3,7 +3,9 @@
 set -Eeuo pipefail
 
 source "./common.sh"
-source "$HOME/.bashrc"
+
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/racytech/.cargo/env
 
 workdir=$(pwd)
 
