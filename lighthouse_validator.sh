@@ -8,9 +8,7 @@ source $HOME/.bashrc
 
 # lighthouse --network holesky account validator import --directory validator_keys
 
-# exec lighthouse \
-#     --debug-level $DEBUG_LEVEL
-#     vc \
-#     --datadir $DATA_DIR/lighthouse_validator \
-#     --network holesky \
-#     --execution-jwt=$DATA_DIR/erigon/jwt.hex
+exec lighthouse \
+    vc \
+    --network holesky \
+    --suggested-fee-recipient "0x4242424242424242424242424242424242424242"
