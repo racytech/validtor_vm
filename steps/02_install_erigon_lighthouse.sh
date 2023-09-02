@@ -6,7 +6,7 @@
 set -Eeuo pipefail
 
 source "./common.sh"
-source "$HOME/.bashrc"
+source $HOME/.bashrc
 
 workdir=$(pwd)
 
