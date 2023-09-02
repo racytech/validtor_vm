@@ -6,6 +6,7 @@
 set -Eeuo pipefail
 
 source "./common.sh"
+source "$HOME/.bashrc"
 
 workdir=$(pwd)
 
@@ -17,7 +18,6 @@ workdir=$(pwd)
 print_step_sleep "Installing Erigon" 1
 erigon_branch="devel"
 erigon_github="https://github.com/ledgerwatch/erigon.git"
-printf "\n\nInstalling Erigon... branch=$erigon_branch\n"
 
 # Erigon
 if [ ! -d "./erigon" ]; then
@@ -48,7 +48,6 @@ cd $workdir
 print_step_sleep "Installing Lighthouse" 1
 lighthouse_branch="unstable"
 lighthouse_github="https://github.com/sigp/lighthouse.git"
-printf "\n\nInstalling Lighthouse... branch=$lighthouse_branch\n"
 
 # Lighthouse
 if [ ! -d "./lighthouse" ]; then
