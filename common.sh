@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 
+
+PID_FILE=$HOME/PIDS.pid
+LOG_DIR=$HOME/logs
+DATA_DIR=$HOME/clients
+
 print_step() {
     echo "
 
@@ -37,7 +42,7 @@ execute_command() {
     EX_NAME=$2
     shift
     shift
-    CMD="$EX_NAME $@ >> $LOG_DIR/$LOG_NAME 2>&1"
+    CMD="$EX_NAME $@ >> $LOG_DIR/$LOG_NAME > /dev/null 2>&1"
     echo "executing: $CMD"
     echo "$CMD" > "$LOG_DIR/$LOG_NAME"
     eval "$CMD &"

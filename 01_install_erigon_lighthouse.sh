@@ -5,7 +5,7 @@
 
 set -Eeuo pipefail
 
-source "./05_common.sh"
+source "./common.sh"
 
 workdir=$(pwd)
 

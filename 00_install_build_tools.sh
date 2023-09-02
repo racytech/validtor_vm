@@ -7,7 +7,7 @@
 
 set -Eeuo pipefail
 
-source "./05_common.sh"
+source "./common.sh"
 
 GO_VERSION="1.20"
 
