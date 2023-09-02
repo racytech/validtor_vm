@@ -8,7 +8,7 @@ GO_VERSION="1.20"
 sudo apt update && sudo apt upgrade -y
 
 ## 2. Install dependencies
-dependencies="build-essential ca-certificates curl gcc g++ make cmake pkg-config llvm-dev libclang-dev clang git"
+dependencies="build-essential ca-certificates curl gcc g++ make cmake pkg-config llvm-dev libclang-dev clang python3-pip"
 sleep 1
 printf "\n\nInstalling dependencies = $dependencies\n"
 sudo apt install $dependencies -y

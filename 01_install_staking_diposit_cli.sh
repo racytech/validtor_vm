@@ -16,7 +16,7 @@ fi
 cd staking-deposit-cli
 git pull
 pip3 install -r requirements.txt
-python3 setup.py install
+sudo python3 setup.py install
 
 
 cd $workdir
