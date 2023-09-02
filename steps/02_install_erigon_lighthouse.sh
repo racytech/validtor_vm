@@ -8,7 +8,7 @@ set -Eeuo pipefail
 source "./common.sh"
 
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/racytech/.cargo/env
+source "$HOME/.cargo/env"
 
 workdir=$(pwd)
 
