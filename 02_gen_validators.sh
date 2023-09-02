@@ -9,7 +9,6 @@ if [ ! -d "./staking-deposit-cli" ]; then
     exit 1
 fi
 
-
 declare -i n_validators
 
 echo "Enter mnemonic (the one used for generating pubkeys): "
@@ -21,8 +20,13 @@ read n_validators
 # # ((n_validators = n_validators + 1))
 echo $n_validators
 
+cd staking-deposit-cli
 
+validator_keys_dir=$workdir/validator_keys
+mkdir -p $validator_keys_dir
 
-# $workdir/
+./deposit.sh existing-mnemonic --num_validators=$n_validators --validator_start_index=0 --chain=holesky --mnemonic="$mnemonic" --folder=$validator_keys_dir
+
+cd $workdir/
 
 # eth2-val-tools keystores --source-mnemonic "$mnemonic" --source-min 0 --source-max $n_validators
