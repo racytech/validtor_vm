@@ -6,9 +6,8 @@
 set -Eeuo pipefail
 
 source "./common.sh"
-
-export PATH=$PATH:/usr/local/go/bin
 source "$HOME/.cargo/env"
+export PATH=$PATH:/usr/local/go/bin
 
 workdir=$(pwd)
 
