@@ -7,4 +7,4 @@ source $HOME/.bashrc
 
 exec erigon \
     --datadir=$DATA_DIR/erigon \
-    --chain=holesky \
+    --chain=holesky > /dev/null 2>&1 &
