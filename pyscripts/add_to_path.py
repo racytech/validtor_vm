@@ -7,7 +7,7 @@ def add_to_path(paths, file):
     with open(file, "a") as f:
         f.writelines(["export PATH=$PATH:" + path + "\n" for path in paths])
 
-# TODO: may be better to pass argument list and a file to add 
+# TODO: may be better to pass arguments list and a file to add to
 # requires manual addition now
 PATHS = [
     "/usr/local/go/bin",
