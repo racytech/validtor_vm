@@ -30,7 +30,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 
 ## 5. Add Go and Rust to the PATH (.bashrc)
-$(pwd)/pyscripts/add_to_path.py
+$(pwd)/pyscripts/add_to_path.py --dirs=/usr/local/go/bin,$HOME/.cargo/env
 
 source $HOME/.bashrc
 

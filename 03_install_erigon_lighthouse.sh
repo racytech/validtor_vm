@@ -13,11 +13,12 @@ printf "\n\nInstalling Erigon... branch=$erigon_branch\n"
 if [ ! -d "./erigon" ]; then
     git clone $erigon_github
 fi
-cd erigon 
-git checkout $erigon_branch 
-git pull origin $erigon_branch 
+cd erigon
+git checkout $erigon_branch
+git pull origin $erigon_branch
 make erigon
-echo "export PATH=$PATH:$(pwd)/build/bin" >> $HOME/.bashrc
+
+$workdir/pyscripts/add_to_path.py --dirs=$(pwd)/build/bin
 
 cd $workdir
 
@@ -26,14 +27,14 @@ lighthouse_branch="unstable"
 lighthouse_github="https://github.com/sigp/lighthouse.git"
 printf "\n\nInstalling Lighthouse... branch=$lighthouse_branch\n"
 
-# Lighthouse 
+# Lighthouse
 if [ ! -d "./lighthouse" ]; then
     git clone $lighthouse_github
 fi
 
-cd lighthouse 
-git checkout $lighthouse_branch 
-git pull origin $lighthouse_branch 
+cd lighthouse
+git checkout $lighthouse_branch
+git pull origin $lighthouse_branch
 make
 
 cd $workdir
