@@ -4,7 +4,7 @@
 
 source "./common.sh"
 source "$HOME/.bashrc"
-export PATH=$PATH:/home/racytech/validtor_vm/erigon/build/bin
+export PATH=$PATH:$HOME/validtor_vm/erigon/build/bin
 # exec erigon \
 #     --datadir=$DATA_DIR/erigon \
 #     --chain=holesky > /dev/null 2>&1 &
