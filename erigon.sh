@@ -5,6 +5,10 @@
 source "./scripts/common.sh"
 source $HOME/.bashrc
 
-exec erigon \
+# exec erigon \
+#     --datadir=$DATA_DIR/erigon \
+#     --chain=holesky > /dev/null 2>&1 &
+
+erigon \
     --datadir=$DATA_DIR/erigon \
-    --chain=holesky > /dev/null 2>&1 &
+    --chain=holesky 
