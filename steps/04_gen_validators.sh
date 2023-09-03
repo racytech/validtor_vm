@@ -30,12 +30,12 @@ echo $mnemonic
 
 echo -n "Enter number of validators (this has to be equal to the number of pubkeys generated using the same mnemonic): "
 read n_validators
-# # ((n_validators = n_validators + 1))
+
 echo $n_validators
 
 cd staking-deposit-cli
 
-./deposit.sh existing-mnemonic --num_validators=$n_validators --validator_start_index=0 --chain=holesky --mnemonic="$mnemonic" --folder=$workdir
+./deposit.sh existing-mnemonic --mnemonic="$mnemonic" --num_validators=$n_validators --validator_start_index=0 --chain=holesky  --folder=$workdir
 
 cd $workdir
 

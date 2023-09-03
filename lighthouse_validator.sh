@@ -2,8 +2,8 @@
 
 # Start Lighthouse Validator client
 
-source "./scripts/common.sh"
-source $HOME/.bashrc
+source "./common.sh"
+source "$HOME/.bashrc"
 
 echo "Enter suggested-fee-recipient: "
 read suggested_fee_recipient
