@@ -21,6 +21,8 @@ if [ -z "$pswd_file" ]; then
 fi
 
 
-lighthouse --network holesky account validator import --directory $workdir/validator_keys --password-file $pswd_file --reuse-password
+$LIGHTHOUSE_BINDIR/lighthouse \
+    --network holesky account validator import \
+    --directory $workdir/validator_keys --password-file $pswd_file --reuse-password
 
 cd $workdir

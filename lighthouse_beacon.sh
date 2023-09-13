@@ -13,7 +13,7 @@ source "$HOME/.bashrc"
 #     --execution-endpoint="http://localhost:8551" \
 #     --execution-jwt=$DATA_DIR/erigon/jwt.hex > /dev/null 2>&1 &
 
-lighthouse \
+$LIGHTHOUSE_BINDIR/lighthouse \
     bn \
     --datadir $DATA_DIR/lighthouse_beacon \
     --network holesky \

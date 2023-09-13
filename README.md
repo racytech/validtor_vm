@@ -29,10 +29,11 @@ This will (steps):
 
 ### Small Details:
 
-The most crucial part of this set up is to provide correct mnemonic and a correct number of validators to generate validator keys. During *step 4* and *step 5* there will be a promt for ***mnemonic*** and ***number of validators*** (step 4) and ***suggested-fee-recipient***
+The most crucial part of this set up is to provide correct mnemonic and a correct number of validators to generate validator keys. During *step 4* and *step 5* there will be a promt for ***mnemonic*** and ***number of validators*** (step 4) and ***suggested-fee-recipient*** (step 5).
 
-Mnemonic and number of validators has to be same that was used for generating pub keys. 
+Mnemonic and number of validators has to be same that was used for generating pubkeys. 
 
+Suggested fee recipient TODO
 
 ## Usefull Links:
 - [What is Holesky Testnet?](https://github.com/eth-clients/holesky)

@@ -5,6 +5,10 @@
 PID_FILE=$HOME/PIDS.pid
 LOG_DIR=$HOME/logs
 DATA_DIR=$HOME/clients
+BINARIES=$HOME/binaries
+
+ERIGON_BINDIR=$BINARIES/erigon
+LIGHTHOUSE_BINDIR=$BINARIES/lighthouse
 
 print_step() {
     echo "
