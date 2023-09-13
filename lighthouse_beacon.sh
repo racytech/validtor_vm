@@ -8,7 +8,7 @@ source "$HOME/.bashrc"
 exec $LIGHTHOUSE_BINDIR/lighthouse \
 bn \
 --http \
---datadir $DATA_DIR/lighthouse_beacon \
+--datadir $DATA_DIR \
 --network holesky \
 --execution-endpoint="http://localhost:8551" \
 --execution-jwt=$DATA_DIR/erigon/jwt.hex > /dev/null 2>&1 &

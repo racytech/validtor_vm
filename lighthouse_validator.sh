@@ -18,7 +18,10 @@ fi
 # exec lighthouse vc --network holesky --suggested-fee-recipient "$suggested_fee_recipient" > /dev/null 2>&1 &
 
 exec $LIGHTHOUSE_BINDIR/lighthouse \
-vc --network holesky --suggested-fee-recipient "$suggested_fee_recipient" > /dev/null 2>&1 &
+vc \
+--datadir $DATA_DIR \
+--network holesky \
+--suggested-fee-recipient "$suggested_fee_recipient" > /dev/null 2>&1 &
 
 # $LIGHTHOUSE_BINDIR/lighthouse \
 # vc --network holesky --suggested-fee-recipient "$suggested_fee_recipient"
