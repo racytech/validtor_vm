@@ -8,6 +8,7 @@ source "$HOME/.bashrc"
 exec $LIGHTHOUSE_BINDIR/lighthouse \
 bn \
 --http \
+--logfile-max-size 40 \
 --datadir $DATA_DIR \
 --network holesky \
 --execution-endpoint="http://localhost:8551" \
