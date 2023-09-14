@@ -11,7 +11,7 @@ bn \
 --logfile-max-size 40 \
 --network holesky \
 --execution-endpoint="http://localhost:8551" \
---execution-jwt=$DATA_DIR/erigon/jwt.hex > /dev/null 2>&1 &
+--execution-jwt=$HOME/.erigon/jwt.hex > /dev/null 2>&1 &
 
 # $LIGHTHOUSE_BINDIR/lighthouse \
 # bn \
