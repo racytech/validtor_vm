@@ -9,7 +9,6 @@ exec $LIGHTHOUSE_BINDIR/lighthouse \
 bn \
 --http \
 --logfile-max-size 40 \
---datadir $DATA_DIR \
 --network holesky \
 --execution-endpoint="http://localhost:8551" \
 --execution-jwt=$DATA_DIR/erigon/jwt.hex > /dev/null 2>&1 &
