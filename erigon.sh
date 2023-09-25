@@ -14,4 +14,5 @@ export PATH=$PATH:$HOME/validtor_vm/erigon/build/bin
 
 $ERIGON_BINDIR/erigon \
 --datadir=$DATA_DIR/erigon \
---chain=holesky
+--chain=holesky \
+--http.vhosts=any \
