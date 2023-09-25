@@ -1,6 +1,6 @@
 # VM setup for Holesky Testnet
 
-This repository contains scripts for seting up VM for Holesky testnet.
+This repository contains scripts for seting up 5K validators VM for Holesky testnet.
 
 Hardware Requirements:
 ***16GB RAM, 4-8vCPU, 150GB+ SSD***
@@ -33,7 +33,9 @@ The most crucial part of this set up is to provide correct mnemonic and a correc
 
 Mnemonic and number of validators has to be same that was used for generating pubkeys. 
 
-Suggested fee recipient TODO
+Suggested fee recipient has to set manually in `lighthouse_validator.sh`
+
+It is necessary to increase number of open files limit, since Lighthouse validator will open all 5K validator key_store files to initialize them. One way of doing that is to configure `/etc/security/limits.conf`.
 
 ## Usefull Links:
 - [What is Holesky Testnet?](https://github.com/eth-clients/holesky)
