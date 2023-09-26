@@ -29,7 +29,7 @@ print_step_sleep "Installing Erigon" 1
 ## Build erigon from source
 erigon_branch="devel"
 erigon_github="https://github.com/ledgerwatch/erigon.git"
-if [ ! -d "./erigon" ]
+if [ ! -d "./erigon" ]; then
     git clone $erigon_github
 fi
 
