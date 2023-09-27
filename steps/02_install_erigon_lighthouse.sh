@@ -17,29 +17,29 @@ mkdir -p $LIGHTHOUSE_BINDIR
 # 1. Install Erigon:
 print_step_sleep "Installing Erigon" 1
 
-### Install erigon from release
-# erigon_release="2.49.1"
-# erigon_download_url="https://github.com/ledgerwatch/erigon/releases/download/v$erigon_release/erigon_${erigon_release}_linux_amd64.tar.gz"
+## Install erigon from release
+erigon_release="2.49.3"
+erigon_download_url="https://github.com/ledgerwatch/erigon/releases/download/v$erigon_release/erigon_${erigon_release}_linux_amd64.tar.gz"
 
-# wget $erigon_download_url
+wget $erigon_download_url
 
-# tar -xvf erigon_${erigon_release}_linux_amd64.tar.gz -C $BINARIES/erigon
+tar -xvf erigon_${erigon_release}_linux_amd64.tar.gz -C $BINARIES/erigon
 
 
-## Build erigon from source
-erigon_branch="devel"
-erigon_github="https://github.com/ledgerwatch/erigon.git"
-if [ ! -d "./erigon" ]; then
-    git clone $erigon_github
-fi
+# ## Build erigon from source
+# erigon_branch="devel"
+# erigon_github="https://github.com/ledgerwatch/erigon.git"
+# if [ ! -d "./erigon" ]; then
+#     git clone $erigon_github
+# fi
 
-cd erigon
-git checkout $erigon_branch
-git pull origin $erigon_branch
+# cd erigon
+# git checkout $erigon_branch
+# git pull origin $erigon_branch
 
-make erigon
+# make erigon
 
-cp ./build/bin/erigon $BINARIES/erigon
+# cp ./build/bin/erigon $BINARIES/erigon
 
 print_done
 cd $workdir
