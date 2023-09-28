@@ -19,7 +19,6 @@ source "$HOME/.bashrc"
 
 exec $LIGHTHOUSE_BINDIR/lighthouse \
 vc \
---http \
 --logfile-max-size 40 \
 --beacon-nodes=http://localhost:5052/ \
 --network holesky \
