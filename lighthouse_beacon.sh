@@ -10,6 +10,7 @@ bn \
 --http \
 --logfile-max-size 40 \
 --network holesky \
+--listen-address=0.0.0.0 \
 --execution-endpoint="http://localhost:8551" \
 --execution-jwt=$HOME/.erigon/jwt.hex > /dev/null 2>&1 &
 

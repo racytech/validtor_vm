@@ -21,6 +21,7 @@ exec $LIGHTHOUSE_BINDIR/lighthouse \
 vc \
 --http \
 --logfile-max-size 40 \
+--beacon-nodes=http://localhost:5052/ \
 --network holesky \
 --suggested-fee-recipient 0x442981708b6d59A62dD622616720a3518a2f96F0 > /dev/null 2>&1 &
 
