@@ -1,0 +1,22 @@
+[Unit]
+Description=Erigon Execution Layer Client service for Holesky testnet
+Wants=network-online.target
+After=network-online.target
+Documentation=https://github.com/ledgerwatch/erigon/tree/devel/docs
+
+[Service]
+Type=simple
+User=racytech0x0
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGINT
+TimeoutStopSec=900
+ExecStart=/home/racytech0x0/binaries/erigon/erigon \
+   --log.dir.verbosity=dbug \
+   --datadir=/home/racytech0x0/.erigon \
+   --chain=holesky \
+   --http.addr="0.0.0.0" \
+   --http.vhosts=any 
+
+[Install]
+WantedBy=multi-user.target

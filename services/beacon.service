@@ -1,0 +1,23 @@
+[Unit]
+Description=Lighthouse Consensus Layer Client service for Holesky testnet
+Wants=network-online.target erigon.service
+After=network-online.target
+Documentation=https://lighthouse-book.sigmaprime.io/
+
+[Service]
+Type=simple
+User=racytech0x0
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGINT
+TimeoutStopSec=900
+ExecStart=/home/racytech0x0/binaries/lighthouse/lighthouse bn \
+    --http \
+    --logfile-max-size 40 \
+    --network holesky \
+    --listen-address=0.0.0.0 \
+    --execution-endpoint="http://localhost:8551" \
+    --execution-jwt=$HOME/.erigon/jwt.hex 
+
+[Install]
+WantedBy=multi-user.target

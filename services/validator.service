@@ -1,0 +1,21 @@
+[Unit]
+Description=Lighthouse Validator Client service for Holesky testnet
+Wants=network-online.target erigon.service beacon.service
+After=network-online.target
+Documentation=https://lighthouse-book.sigmaprime.io/
+
+[Service]
+Type=simple
+User=racytech0x0
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGINT
+TimeoutStopSec=900
+ExecStart=/home/racytech0x0/binaries/lighthouse/lighthouse vc \
+--logfile-max-size 40 \
+--beacon-nodes=http://localhost:5052/ \
+--network holesky \
+--suggested-fee-recipient 0x442981708b6d59A62dD622616720a3518a2f96F0 
+
+[Install]
+WantedBy=multi-user.target
