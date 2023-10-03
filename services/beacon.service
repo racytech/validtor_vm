@@ -17,7 +17,7 @@ ExecStart=/home/racytech0x0/binaries/lighthouse/lighthouse bn \
     --network holesky \
     --listen-address=0.0.0.0 \
     --execution-endpoint="http://localhost:8551" \
-    --execution-jwt=$HOME/.erigon/jwt.hex 
+    --execution-jwt=/home/racytech0x0/.erigon/jwt.hex 
 
 [Install]
 WantedBy=multi-user.target
