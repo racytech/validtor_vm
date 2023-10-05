@@ -11,6 +11,7 @@ Restart=on-failure
 RestartSec=5
 KillSignal=SIGINT
 TimeoutStopSec=900
+LimitNOFILE=500000
 ExecStart=/home/racytech0x0/binaries/lighthouse/lighthouse vc \
     --logfile-max-size 40 \
     --beacon-nodes=http://localhost:5052/ \
