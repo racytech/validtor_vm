@@ -8,7 +8,6 @@ export PATH=$PATH:$HOME/validtor_vm/erigon/build/bin
 
 
 exec $ERIGON_BINDIR/erigon \
---log.dir.verbosity=dbug \
 --datadir=$HOME/.erigon \
 --chain=holesky \
 --http.addr="0.0.0.0" \
