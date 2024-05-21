@@ -18,7 +18,7 @@ mkdir -p $LIGHTHOUSE_BINDIR
 print_step_sleep "Installing Erigon" 1
 
 ## Install erigon from release
-erigon_release="2.57.3"
+erigon_release="2.60.0"
 erigon_download_url="https://github.com/ledgerwatch/erigon/releases/download/v$erigon_release/erigon_${erigon_release}_linux_amd64.tar.gz"
 
 wget $erigon_download_url
@@ -48,7 +48,7 @@ cd $workdir
 # 3. Install Lighthouse
 print_step_sleep "Installing Lighthouse" 1
 
-lighthouse_release="4.6.0"
+lighthouse_release="5.1.3"
 lighthouse_download_url="https://github.com/sigp/lighthouse/releases/download/v$lighthouse_release/lighthouse-v$lighthouse_release-x86_64-unknown-linux-gnu.tar.gz"
 
 wget $lighthouse_download_url
