@@ -11,7 +11,7 @@ set -Eeuo pipefail
 
 source "./common.sh"
 
-GO_VERSION="1.20"
+GO_VERSION="1.21.5"
 
 # 1. update && upgrade vm
 print_step_sleep "sudo apt update && sudo apt upgrade -y" 1
