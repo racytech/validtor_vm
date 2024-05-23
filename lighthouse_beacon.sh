@@ -9,6 +9,7 @@ exec $LIGHTHOUSE_BINDIR/lighthouse \
 bn \
 --http \
 --logfile-max-size 40 \
+--logfile-debug-level info \
 --network holesky \
 --listen-address=0.0.0.0 \
 --allow-insecure-genesis-sync \
