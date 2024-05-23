@@ -35,7 +35,13 @@ Mnemonic and number of validators has to be same that was used for generating pu
 
 Suggested fee recipient has to set manually in `lighthouse_validator.sh`
 
-It is necessary to increase number of open files limit, since Lighthouse validator will open all 5K validator key_store files to initialize them. One way of doing that is to configure `/etc/security/limits.conf`.
+Since validator client may open much more files then OS is configured to, it is necessary to increase number of open files limit, (in this case Lighthouse validator will open all 5K validator key_store files to initialize them). One way of doing that on Linux is to configure `/etc/security/limits.conf` by addying 
+```
+## Example hard limit for max opened files
+<user>         hard nofile 16384
+## Example soft limit for max opened files
+<user>         soft nofile 8192
+```
 
 ## Usefull Links:
 - [What is Holesky Testnet?](https://github.com/eth-clients/holesky)
