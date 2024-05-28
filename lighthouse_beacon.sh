@@ -11,6 +11,7 @@ bn \
 --logfile-max-size 40 \
 --logfile-debug-level info \
 --network holesky \
+--checkpoint-sync-url=https://checkpoint-sync.holesky.ethpandaops.io \
 --listen-address=0.0.0.0 \
 --allow-insecure-genesis-sync \
 --execution-endpoint="http://localhost:8551" \
