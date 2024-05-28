@@ -13,7 +13,6 @@ bn \
 --network holesky \
 --checkpoint-sync-url=https://checkpoint-sync.holesky.ethpandaops.io \
 --listen-address=0.0.0.0 \
---allow-insecure-genesis-sync \
 --execution-endpoint="http://localhost:8551" \
 --execution-jwt=$HOME/.erigon/jwt.hex > /dev/null 2>&1 &
 
